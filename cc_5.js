@@ -23,3 +23,4 @@ function calculateOvertimePay(rate, hours) {
     }
     console.log(calculateOvertimePay(40, 47))
 //step 4 done
+
