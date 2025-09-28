@@ -24,3 +24,9 @@ function calculateOvertimePay(rate, hours) {
     console.log(calculateOvertimePay(40, 47))
 //step 4 done
 
+function calculateTaxes (grossPay) {
+    let taxRate = 0.15;
+    return grossPay * taxRate;
+}
+console.log (calculateTaxes(1000))
+//step 5 done
