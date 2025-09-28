@@ -30,3 +30,25 @@ function calculateTaxes (grossPay) {
 }
 console.log (calculateTaxes(1000))
 //step 5 done
+
+function processPayroll(employee) {
+
+  let basePay = calculateBasePay(employee.hourlyRate, employee.hoursWorked);
+  let overtimePay = calculateOvertimePay(employee.hourlyRate, employee.hoursWorked);
+  let grossPay = basePay + overtimePay;
+  let taxes = calculateTaxes(grossPay);
+  let netPay = grossPay - taxes;
+
+  return {
+    name: employee.name,
+    basePay: basePay,
+    overtimePay: overtimePay,
+    grossPay: grossPay,
+    netPay: netPay
+  };
+}
+
+let sampleEmployee = { name: "Peter", hourlyRate: 22, hoursWorked: 45 };
+console.log(processPayroll(sampleEmployee));
+
+//step 6 done
