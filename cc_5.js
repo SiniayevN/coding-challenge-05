@@ -52,3 +52,8 @@ let sampleEmployee = { name: "Peter", hourlyRate: 22, hoursWorked: 45 };
 console.log(processPayroll(sampleEmployee));
 
 //step 6 done
+
+for (let emp of employees) {
+    let payroll = processPayroll(emp);
+    console.log(payroll);
+}
